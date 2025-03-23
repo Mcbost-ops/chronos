@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Mundial</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="tema-padrao">
+    <div class="container">
+        <div class="relogio-principal">
+            <div class="controles">
+                <button class="btn-tema" onclick="alternarTema()">
+                    <i class="fas fa-paint-brush"></i>
+                </button>
+                <button class="btn-modo" onclick="alternarModo()">
+                    <i class="fas fa-clock"></i>
+                </button>
+                <button class="btn-alarme" onclick="toggleAlarme()">
+                    <i class="fas fa-bell"></i>
+                </button>
+            </div>
+            <div class="tempo">
+                <div class="digitos">
+                    <div class="digito-grupo">
+                        <span id="hora">00</span>
+                        <small>Horas</small>
+                    </div>
+                    <span class="separador">:</span>
+                    <div class="digito-grupo">
+                        <span id="minuto">00</span>
+                        <small>Minutos</small>
+                    </div>
+                    <span class="separador">:</span>
+                    <div class="digito-grupo">
+                        <span id="segundo">00</span>
+                        <small>Segundos</small>
+                    </div>
+                    <span id="periodo" class="periodo"></span>
+                </div>
+            </div>
+            <div class="data">
+                <i class="fas fa-calendar-alt"></i>
+                <span id="data-completa">Segunda-feira, 01 de Janeiro de 2024</span>
+            </div>
+        </div>
+        
+        <div class="fusos">
+            <h2><i class="fas fa-globe-americas"></i> Horários Mundiais</h2>
+            <div class="fuso-grid">
+                <div class="fuso-card">
+                    <div class="cidade">
+                        <i class="fas fa-building"></i>
+                        <span>Nova York</span>
+                    </div>
+                    <div class="hora" id="ny-time">00:00:00</div>
+                </div>
+                <div class="fuso-card">
+                    <div class="cidade">
+                        <i class="fas fa-landmark"></i>
+                        <span>Londres</span>
+                    </div>
+                    <div class="hora" id="london-time">00:00:00</div>
+                </div>
+                <div class="fuso-card">
+                    <div class="cidade">
+                        <i class="fas fa-torii-gate"></i>
+                        <span>Tóquio</span>
+                    </div>
+                    <div class="hora" id="tokyo-time">00:00:00</div>
+                </div>
+                <div class="fuso-card">
+                    <div class="cidade">
+                        <i class="fas fa-sun"></i>
+                        <span>Sydney</span>
+                    </div>
+                    <div class="hora" id="sydney-time">00:00:00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

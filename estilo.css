@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+:root {
+    --primary-color: #4ecca3;
+    --secondary-color: #45b7d1;
+    --bg-color: #232931;
+    --text-color: #eeeeee;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --hover-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.relogio-principal {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.controles button {
+    background: var(--card-bg);
+    border: none;
+    color: var(--text-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.controles button:hover {
+    background: var(--hover-color);
+    transform: translateY(-3px);
+}
+
+.tempo {
+    margin: 2rem 0;
+}
+
+.digitos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.digito-grupo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.digito-grupo span {
+    font-size: 8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 0 0 20px rgba(78, 204, 163, 0.3);
+}
+
+.digito-grupo small {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.separador {
+    font-size: 6rem;
+    color: var(--secondary-color);
+    animation: piscar 1s infinite;
+}
+
+.data {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.fusos {
+    margin-top: 3rem;
+}
+
+.fusos h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.fuso-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.fuso-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.fuso-card:hover {
+    transform: translateY(-5px);
+    background: var(--hover-color);
+}
+
+.cidade {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.hora {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+@keyframes piscar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Temas */
+.tema-escuro {
+    --primary-color: #00ff88;
+    --secondary-color: #00a2ff;
+    --bg-color: #1a1a1a;
+}
+
+.tema-roxo {
+    --primary-color: #b14eff;
+    --secondary-color: #ff4e8c;
+    --bg-color: #2d1a4a;
+}
+
+.tema-laranja {
+    --primary-color: #ff6b4e;
+    --secondary-color: #ffb14e;
+    --bg-color: #4a2d1a;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .digito-grupo span {
+        font-size: 4rem;
+    }
+    
+    .separador {
+        font-size: 3rem;
+    }
+    
+    .fuso-grid {
+        grid-template-columns: 1fr;
+    }
+}
