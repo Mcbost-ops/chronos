@@ -19,6 +19,7 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease;
@@ -32,6 +33,7 @@ body {
     border-radius: 20px;
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
 .relogio-principal {
@@ -191,4 +193,23 @@ body {
     .fuso-grid {
         grid-template-columns: 1fr;
     }
+    
+    .rodape {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+}
+
+.rodape {
+    text-align: center;
+    padding: 1rem;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.rodape:hover {
+    opacity: 1;
+    transform: translateY(-2px);
 }
