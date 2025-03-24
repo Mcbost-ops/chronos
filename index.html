@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relógio Mundial</title>
     <link rel="stylesheet" href="estilo.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="tema-padrao">
     <div class="container">
+        <div class="loading">
+            <i class="fas fa-spinner fa-spin"></i>
+            <span>Carregando horários...</span>
+        </div>
         <div class="relogio-principal">
             <div class="controles">
                 <button class="btn-tema" onclick="alternarTema()">
@@ -16,9 +20,6 @@
                 </button>
                 <button class="btn-modo" onclick="alternarModo()">
                     <i class="fas fa-clock"></i>
-                </button>
-                <button class="btn-alarme" onclick="toggleAlarme()">
-                    <i class="fas fa-bell"></i>
                 </button>
             </div>
             <div class="tempo">
@@ -42,7 +43,7 @@
             </div>
             <div class="data">
                 <i class="fas fa-calendar-alt"></i>
-                <span id="data-completa">Segunda-feira, 01 de Janeiro de 2024</span>
+                <span id="data-completa">Segunda-feira, 01 de Janeiro de 2025</span>
             </div>
         </div>
         
@@ -81,8 +82,4 @@
         </div>
     </div>
     <footer class="rodape">
-        <p>&copy; 2024 - Todos os direitos reservados a Bezão</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+       
